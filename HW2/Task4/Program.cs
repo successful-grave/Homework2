@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Task3
+namespace Task4
 {
     class Program
     {
@@ -16,8 +16,22 @@ namespace Task3
             int thirdNumber = number % 10;
             Console.WriteLine($"Третья цифра числа: {thirdNumber}");
 
-            bool booleanVariable = secondNumber <= firstNumber && secondNumber > thirdNumber;
-            Console.WriteLine($"Число: {number} ({booleanVariable})");
+            if (firstNumber != thirdNumber)
+            {
+                int tmp = firstNumber;
+                firstNumber = thirdNumber;
+                thirdNumber = tmp;
+
+                int newNumber = firstNumber * 100 + secondNumber * 10 + thirdNumber;
+                Console.WriteLine($"Новое число: {newNumber}");
+                Console.WriteLine($"{number} -> {newNumber}");
+            }
+            else
+            {
+                Console.WriteLine("Число не требует преобразования");
+            }
+
+            
         }
     }
 }

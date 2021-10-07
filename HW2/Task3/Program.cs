@@ -16,7 +16,15 @@ namespace Task3
             int thirdNumber = number % 10;
             Console.WriteLine($"Третья цифра числа: {thirdNumber}");
 
-            bool booleanVariable = secondNumber <= firstNumber && secondNumber > thirdNumber;
+            bool booleanVariable;
+            if(secondNumber <= firstNumber && secondNumber > thirdNumber)
+            {
+                booleanVariable = true;
+            }
+            else
+            {
+                booleanVariable = false;
+            }
             Console.WriteLine($"Число: {number} ({booleanVariable})");
         }
     }

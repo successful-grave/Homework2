@@ -8,7 +8,15 @@ namespace Task5
         {
             Console.Write("Введите число: ");
             double number = Convert.ToDouble(Console.ReadLine());
-            bool booleanVariable = number == (int)number;
+            bool booleanVariable;
+            if(number == (int)number)
+            {
+                booleanVariable = true;
+            }
+            else
+            {
+                booleanVariable = false;
+            }
             Console.WriteLine($"{number} ({booleanVariable})");
         }
     }
